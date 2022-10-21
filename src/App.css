@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Distressed&family=Rubik+Iso&display=swap");
+
+:root {
+  --primary-color: #fed602;
+  --secondary-color: #917df7;
+  --gray-color: #26262e;
+  --black-color: #111111;
+  --text-color: #eeeeee;
+  --bg-color: radial-gradient(
+    circle,
+    var(--gray-color),
+    var(--black-color)
+  ) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.cta-btn {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  margin: 10px 0 10px 0;
+}
+
+/* Game Component Styles */
+.game-wrapper {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.game .content {
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  padding: 20px;
+  /* margin-top: 20px; */
+}
+
+.game .content h1 {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.game .content h2 {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+
+.game .content span {
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+.game .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.game .container h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 5px 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-family: "Rubik Distressed", cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game .container .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  height: 550px;
+  width: 550px;
+}
+
+.game .game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: var(--secondary-color);
+  color: var(--black-color);
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+@keyframes hideCard {
+  0%,
+  70% {
+    transform: rotateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotateY(180deg);
   }
+}
+
+.game-card img {
+  max-width: 80%;
+  max-height: 80%;
+  transform: scale(0);
+  animation: 2s hideImage linear;
+  transition: transform 0.5s;
+}
+
+@keyframes hideImage {
+  0%,
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.game-card.active {
+  transform: rotateY(0) !important;
+}
+
+.game-card.active img {
+  transform: scaleY(1) !important;
+}
+
+.game-card.correct {
+  background: rgb(78, 247, 78);
+}
+
+.game-card.wrong {
+  background: #e50914;
+}
+
+/* GameContent Component styles */
+.content-wrapper .row {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.content-wrapper .reset-btn {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  border: none;
+  background: #e50914;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.content-wrapper .row span {
+  background: rgb(78, 247, 78);
+  color: var(--black-color);
+  font-weight: 600;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.timer-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer-buttons button {
+  padding: 3px;
+  font-size: 20px;
+  margin: 10px 0;
+  min-width: 50px;
+}
+
+/* GoodBye Component */
+.goodbye-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5em;
+}
+
+.goodbye-page p {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.goodbye-page img {
+  width: 200px;
+}
+
+.goodbye-page h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 5px 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-family: "Rubik Distressed", cursive;
 }
