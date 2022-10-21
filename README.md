@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+### index
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# L2T12 Capstone Project 1 ReactJS Memory Game
 
-## Available Scripts
+![Project Image 1](screenshots/project-image-1.png)
 
-In the project directory, you can run:
+> ReactJS Dinosaur Themed Memory Game.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [References](#references)
+- [Author Info](#author-info)
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `yarn build`
+Simple reactjs dinosaur themed memory game created using the create react app command 8 differently styled components for the game, game cards, self timer, dialog box and score counter. The project uses react hooks to move state and props around, react router dom for navigation, mapping functions to render elements into JSX and more.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The aim game is to match cards with the same image as quick as possible with every restart the cards will reshuffle to keep the game interesting. Each complete match gives the user 2 points the game ends at 16 points. The self timer can be used to make the game more challenging so the user can compare how fast they took to complete the game. The self timer will pause when the dialog box is open and the user has full control of starting and restarting the timer.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Reactjs
+- React hooks
+- React Router Dom
+- JSX
+- CSS
 
-### `yarn eject`
+[Back To The Top](#index)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How To Use
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- To install clone or download this repository
+- Open the folder inside terminal or the command line of your choice
+- run npm install
+- npm start
+- the project should start on http://localhost:3000/
 
-## Learn More
+### Step 1
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+when the game loads the user gets a few seconds to see the cards facing up so they can memorize positions.
+![Project Image 2](screenshots/project-image-1.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Step 2
 
-### Code Splitting
+Once cards flip backwards hiding the image, the user can start matching cards as they remember. When the cards are a match the background will turn green like the example image below.
+![Project Image 2](screenshots/project-image-2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Step 3
 
-### Analyzing the Bundle Size
+When the cards are not a match the background will turn red then flip backwards again hiding the image like the example image below.
+![Project Image 2](screenshots/project-image-3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Step 4
 
-### Making a Progressive Web App
+When all cards have been matched, they will all have a green background like the example image below with an alert to congratulate the user and display an option to play again or quit the game.
+![Project Image 2](screenshots/project-image-4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Step 5
 
-### Advanced Configuration
+Below image shows a closer look at the self timer including a "help" button that displays instructions of how to play the game when clicked.
+![Project Image 2](screenshots/project-image-5.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Step 6
 
-### Deployment
+Dialog box that displays when "help" button is clicked.
+![Project Image 2](screenshots/project-image-6.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Back To The Top](#index)
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## References
+
+- Website - [HyperionDev](https://www.hyperiondev.com/)
+
+---
+
+## Author Info
+
+- Linkedin - [Gauta Ncholo](https://www.linkedin.com/in/gauta-ncholo/)
+
+[Back To The Top](#index)
+
+---
