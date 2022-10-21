@@ -44,6 +44,7 @@ The aim game is to match cards with the same image as quick as possible with eve
 - run npm install
 - npm start
 - the project should start on http://localhost:3000/
+- Website - [Live Demo](https://dinosaur-land.herokuapp.com/)
 
 ### Step 1
 
